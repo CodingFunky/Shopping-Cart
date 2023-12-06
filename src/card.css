@@ -1,0 +1,33 @@
+.card-container {
+    border: 1px solid black;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+.card {
+    height: 100px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 4%;
+    margin-bottom: 2rem;
+}
+.card-title {
+    border: 1px black solid;
+}
+.card img{
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: contain;
+}
+.card-des {
+    border: 1px black solid;
+}

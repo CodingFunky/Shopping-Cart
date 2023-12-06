@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 90%;
+    /* gap: 30em; */
+    /* margin: 1em */
+}
+.logo {
+    height: 9em;
+    padding: 1.5em;
+  }
+  
+.links {
+    display: flex;
+    list-style-type: none;
+    gap: 1em;
+    margin-right: 4em;
+}
+.right-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
