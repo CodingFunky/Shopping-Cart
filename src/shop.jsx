@@ -27,8 +27,9 @@ function Shop() {
   }, []);
   return (
     <div className="shop-container">
-      <div className="shop-title">
-        <h1>Shop</h1>
+      <div className="shop-banner">
+        <h1 className="shop-title">Shop</h1>
+        <p className="shop-tagline">Buy all the things, stuff and do-dads</p>
       </div>
       <div className="shop-main">
         {/* <div className="shop-search">
