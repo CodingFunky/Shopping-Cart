@@ -29,7 +29,9 @@ function Shop() {
     <div className="shop-container">
       <div className="shop-banner">
         <h1 className="shop-title">Shop</h1>
-        <p className="shop-tagline">Buy all the things, stuff and do-dads</p>
+        <p className="shop-tagline">
+          A place to by trinkets, stuff, and things
+        </p>
       </div>
       <div className="shop-main">
         {/* <div className="shop-search">

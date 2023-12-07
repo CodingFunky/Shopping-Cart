@@ -25,3 +25,18 @@
 .shop-main {
   display: flex;
 }
+.shop-sidebar {
+  width: 30%;
+  margin-left: 1em;
+}
+.shop-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 82%;
+  gap: 3em;
+}
