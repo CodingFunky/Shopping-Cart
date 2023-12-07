@@ -40,3 +40,25 @@
   width: 82%;
   gap: 3em;
 }
+.home-container {
+  display: flex;
+  flex-direction: column;
+}
+.home-banner-container {
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+  gap: 10em;
+}
+.home-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.home-banner-img {
+  width: 50%;
+}
