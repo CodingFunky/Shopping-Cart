@@ -8,6 +8,8 @@ import { NavLink, Route, Routes, useLocation } from "react-router-dom";
 function Shop() {
   const [allProducts, setAllProducts] = useState([]);
   const [shownProducts, setShownProducts] = useState([]);
+  const [currentActiveTab, setActiveTab] = useState("");
+  const [currentCategory, setCurrentCategory] = useState("All");
 
   function getProducts() {
     fetch("https://fakestoreapi.com/products/")
@@ -25,6 +27,31 @@ function Shop() {
   React.useEffect(() => {
     getProducts();
   }, []);
+
+  function handleCategoryChange(catagory) {
+    // setActiveTab(catagory);
+    // setCurrentCategory(catagory);
+    if (catagory === "all") {
+      setShownProducts(allProducts);
+    } else if (catagory === "men's clothing") {
+      setShownProducts(
+        allProducts.filter((product) => product.category === "men's clothing")
+      );
+    } else if (catagory === "women's clothing") {
+      setShownProducts(
+        allProducts.filter((product) => product.catagory === "women's clothing")
+      );
+    } else if (catagory === "jewelery") {
+      setShownProducts(
+        allProducts.filter((product) => product.category === "jewelery")
+      );
+    } else if (catagory === "electronics") {
+      setShownProducts(
+        allProducts.filter((product) => product.category === "electronics")
+      );
+    }
+  }
+
   return (
     <div className="shop-container">
       <div className="shop-banner">
@@ -39,11 +66,36 @@ function Shop() {
         </div> */}
         <nav className="shop-sidebar">
           <ul className="shop-links">
-            <li className="shop-link-wrapper">ALL PRODUCTS</li>
-            <li className="shop-link-wrapper">MEN'S CLOTHING</li>
-            <li className="shop-link-wrapper">WOMEN'S CLOTHING</li>
-            <li className="shop-link-wrapper">JEWELERY</li>
-            <li className="shop-link-wrapper">ELECTRONICS</li>
+            <li
+              className="shop-link-wrapper"
+              onClick={() => handleCategoryChange("all")}
+            >
+              ALL PRODUCTS
+            </li>
+            <li
+              className="shop-link-wrapper"
+              onClick={() => handleCategoryChange("men's clothing")}
+            >
+              MEN'S CLOTHING
+            </li>
+            <li
+              className="shop-link-wrapper"
+              onClick={() => handleCategoryChange("women's clothing")}
+            >
+              WOMEN'S CLOTHING
+            </li>
+            <li
+              className="shop-link-wrapper"
+              onClick={() => handleCategoryChange("jewelery")}
+            >
+              JEWELERY
+            </li>
+            <li
+              className="shop-link-wrapper"
+              onClick={() => handleCategoryChange("electronics")}
+            >
+              ELECTRONICS
+            </li>
           </ul>
         </nav>
         <div className="catagories"></div>

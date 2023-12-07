@@ -29,3 +29,14 @@ a {
     text-decoration: none;
     color: inherit;
 }
+.divider {
+    width: 2px; /* Width of the line */
+    height: 500%; /* Adjust based on your navbar's height */
+    background-color: black; /* Color of the line */
+    transform: rotate(90deg);
+  }
+  @media (max-width: 985px) {
+    .divider {
+      display: none;
+    }
+}

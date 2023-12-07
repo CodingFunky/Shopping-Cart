@@ -24,7 +24,7 @@ function Home() {
         <div className="home-banner">
           <section className="home-main">
             <h2>
-              Jewelry to show how many more money you have than everyone else
+              Jewelry to show how much more money you have than everyone else
             </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
