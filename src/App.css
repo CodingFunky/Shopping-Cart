@@ -1,6 +1,9 @@
 .active {
   text-decoration: underline;
 }
+.btn {
+  cursor: pointer;
+}
 .shop-banner {
   display: flex;
   flex-direction: column;

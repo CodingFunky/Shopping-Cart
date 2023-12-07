@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import Card from "./card.jsx";
-import { NavLink, Route, Routes, useLocation } from "react-router-dom";
-// import MensClothing from './categories/MensClothing'; // Import your category components
-// import WomensClothing from './categories/WomensClothing';
-// import Jewelry from './categories/Jewelry';
+// import { NavLink, Route, Routes, useLocation } from "react-router-dom";
 
 function Shop() {
   const [allProducts, setAllProducts] = useState([]);
@@ -33,7 +30,7 @@ function Shop() {
     setCurrentCategory(category);
 
     if (category === "all") {
-      setShownProducts(allProducts.slice(0, 8)); // Show first 10 products or as needed
+      setShownProducts(allProducts.slice(0, 8)); // Show first 8 products or as needed
     } else {
       const filteredProducts = allProducts.filter(
         (product) => product.category === category
@@ -54,31 +51,41 @@ function Shop() {
         <nav className="shop-sidebar">
           <ul className="shop-links">
             <li
-              className="shop-link-wrapper"
+              className={`shop-link-wrapper ${
+                currentCategory === "all" ? "active" : ""
+              } btn`}
               onClick={() => handleCategoryChange("all")}
             >
               ALL PRODUCTS
             </li>
             <li
-              className="shop-link-wrapper"
+              className={`shop-link-wrapper ${
+                currentCategory === "men's clothing" ? "active" : ""
+              } btn`}
               onClick={() => handleCategoryChange("men's clothing")}
             >
               MEN'S CLOTHING
             </li>
             <li
-              className="shop-link-wrapper"
+              className={`shop-link-wrapper ${
+                currentCategory === "women's clothing" ? "active" : ""
+              } btn`}
               onClick={() => handleCategoryChange("women's clothing")}
             >
               WOMEN'S CLOTHING
             </li>
             <li
-              className="shop-link-wrapper"
+              className={`shop-link-wrapper ${
+                currentCategory === "jewelery" ? "active" : ""
+              } btn`}
               onClick={() => handleCategoryChange("jewelery")}
             >
               JEWELERY
             </li>
             <li
-              className="shop-link-wrapper"
+              className={`shop-link-wrapper ${
+                currentCategory === "electronics" ? "active" : ""
+              } btn`}
               onClick={() => handleCategoryChange("electronics")}
             >
               ELECTRONICS
