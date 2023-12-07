@@ -26,13 +26,29 @@ function Shop() {
     getProducts();
   }, []);
   return (
-    <div className="shopMain">
-      <h1>Shop</h1>
-      <div className="catagories"></div>
-      <div className="card-container">
-        {shownProducts.map((product, index) => (
-          <Card product={product} key={index}></Card>
-        ))}
+    <div className="shop-container">
+      <div className="shop-title">
+        <h1>Shop</h1>
+      </div>
+      <div className="shop-main">
+        {/* <div className="shop-search">
+          <input type="text" placeholder="Search Product"></input>
+        </div> */}
+        <nav className="shop-sidebar">
+          <ul className="shop-links">
+            <li className="shop-link-wrapper">ALL PRODUCTS</li>
+            <li className="shop-link-wrapper">MEN'S CLOTHING</li>
+            <li className="shop-link-wrapper">WOMEN'S CLOTHING</li>
+            <li className="shop-link-wrapper">JEWELERY</li>
+            <li className="shop-link-wrapper">ELECTRONICS</li>
+          </ul>
+        </nav>
+        <div className="catagories"></div>
+        <div className="card-container">
+          {shownProducts.map((product, index) => (
+            <Card product={product} key={index}></Card>
+          ))}
+        </div>
       </div>
     </div>
   );
