@@ -5,9 +5,8 @@
     height: 100px;
     width: 90%;
     overflow: hidden;
-    /* gap: 30em; */
-    /* margin: 1em */
     margin-top: 1em;
+  
 }
 .logo {
     height: 9em;
@@ -39,4 +38,23 @@ a {
     .divider {
       display: none;
     }
+}
+.cart-container {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  z-index: 101;
+  border-radius: 5% 0% 0% 5%;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100; /* Ensure it's above other content but below the cart */
 }

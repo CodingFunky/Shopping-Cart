@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect } from "react";
 import Card from "./card.jsx";
 // import { NavLink, Route, Routes, useLocation } from "react-router-dom";
 
-function Shop() {
+function Shop(props) {
   const [allProducts, setAllProducts] = useState([]);
   const [shownProducts, setShownProducts] = useState([]);
   const [currentCategory, setCurrentCategory] = useState("all");
@@ -53,7 +54,7 @@ function Shop() {
           <ul className="shop-links">
             <li
               className={`shop-link-wrapper ${
-                currentCategory === "all" ? "active" : ""
+                currentCategory === "all" ? "active-sb" : ""
               } btn`}
               onClick={() => handleCategoryChange("all")}
             >
@@ -61,7 +62,7 @@ function Shop() {
             </li>
             <li
               className={`shop-link-wrapper ${
-                currentCategory === "men's clothing" ? "active" : ""
+                currentCategory === "men's clothing" ? "active-sb" : ""
               } btn`}
               onClick={() => handleCategoryChange("men's clothing")}
             >
@@ -69,7 +70,7 @@ function Shop() {
             </li>
             <li
               className={`shop-link-wrapper ${
-                currentCategory === "women's clothing" ? "active" : ""
+                currentCategory === "women's clothing" ? "active-sb" : ""
               } btn`}
               onClick={() => handleCategoryChange("women's clothing")}
             >
@@ -77,7 +78,7 @@ function Shop() {
             </li>
             <li
               className={`shop-link-wrapper ${
-                currentCategory === "jewelery" ? "active" : ""
+                currentCategory === "jewelery" ? "active-sb" : ""
               } btn`}
               onClick={() => handleCategoryChange("jewelery")}
             >
@@ -85,7 +86,7 @@ function Shop() {
             </li>
             <li
               className={`shop-link-wrapper ${
-                currentCategory === "electronics" ? "active" : ""
+                currentCategory === "electronics" ? "active-sb" : ""
               } btn`}
               onClick={() => handleCategoryChange("electronics")}
             >
@@ -96,7 +97,11 @@ function Shop() {
         <div className="catagories"></div>
         <div className="card-container">
           {shownProducts.map((product, index) => (
-            <Card product={product} key={index}></Card>
+            <Card
+              product={product}
+              key={index}
+              addToCart={props.addToCart}
+            ></Card>
           ))}
         </div>
       </div>

@@ -5,9 +5,6 @@ import "./card.css";
 function Card({ product }) {
   return (
     <div className="card">
-      {/* <div className="card-title">
-        <h3>{product.title}</h3>
-      </div> */}
       <div className="image-container">
         <img className="card-image" src={product.image} alt="" />{" "}
         <div className="card-price">${product.price}</div>

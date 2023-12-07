@@ -1,4 +1,10 @@
-.active {
+.active-nb {
+
+}
+.active-nb:hover {
+  text-decoration: underline;
+}
+.active-sb {
   text-decoration: underline;
 }
 h3 {
@@ -6,6 +12,9 @@ h3 {
 }
 .btn {
   cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.05);
 }
 .shop-banner {
   display: flex;
