@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Card from "./card.jsx";
+import { NavLink, Route, Routes, useLocation } from "react-router-dom";
+// import MensClothing from './categories/MensClothing'; // Import your category components
+// import WomensClothing from './categories/WomensClothing';
+// import Jewelry from './categories/Jewelry';
+
 function Shop() {
   const [allProducts, setAllProducts] = useState([]);
   const [shownProducts, setShownProducts] = useState([]);
@@ -23,6 +28,7 @@ function Shop() {
   return (
     <div className="shopMain">
       <h1>Shop</h1>
+      <div className="catagories"></div>
       <div className="card-container">
         {shownProducts.map((product, index) => (
           <Card product={product} key={index}></Card>
