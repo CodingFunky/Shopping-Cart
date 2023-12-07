@@ -1,6 +1,9 @@
 .active {
   text-decoration: underline;
 }
+h3 {
+  margin: 0px;
+}
 .btn {
   cursor: pointer;
 }

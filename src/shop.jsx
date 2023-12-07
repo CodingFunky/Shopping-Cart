@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect } from "react";
 import Card from "./card.jsx";
 // import { NavLink, Route, Routes, useLocation } from "react-router-dom";
