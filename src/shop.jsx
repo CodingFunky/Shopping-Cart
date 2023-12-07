@@ -39,7 +39,7 @@ function Shop() {
       );
     } else if (catagory === "women's clothing") {
       setShownProducts(
-        allProducts.filter((product) => product.catagory === "women's clothing")
+        allProducts.filter((product) => product.category === "women's clothing")
       );
     } else if (catagory === "jewelery") {
       setShownProducts(
@@ -61,9 +61,6 @@ function Shop() {
         </p>
       </div>
       <div className="shop-main">
-        {/* <div className="shop-search">
-          <input type="text" placeholder="Search Product"></input>
-        </div> */}
         <nav className="shop-sidebar">
           <ul className="shop-links">
             <li
