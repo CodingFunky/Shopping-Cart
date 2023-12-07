@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Card from "./card.jsx";
 import { NavLink, Route, Routes, useLocation } from "react-router-dom";
 // import MensClothing from './categories/MensClothing'; // Import your category components
@@ -8,8 +8,7 @@ import { NavLink, Route, Routes, useLocation } from "react-router-dom";
 function Shop() {
   const [allProducts, setAllProducts] = useState([]);
   const [shownProducts, setShownProducts] = useState([]);
-  const [currentActiveTab, setActiveTab] = useState("");
-  const [currentCategory, setCurrentCategory] = useState("All");
+  const [currentCategory, setCurrentCategory] = useState("all");
 
   function getProducts() {
     fetch("https://fakestoreapi.com/products/")
@@ -17,38 +16,29 @@ function Shop() {
       .then((data) => {
         let shown = [];
         setAllProducts(data);
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 8; i++) {
           shown.push(data[i]);
         }
         setShownProducts(shown);
       });
   }
   //Get Products from server on load
-  React.useEffect(() => {
+  useEffect(() => {
     getProducts();
   }, []);
 
-  function handleCategoryChange(catagory) {
+  function handleCategoryChange(category) {
     // setActiveTab(catagory);
     // setCurrentCategory(catagory);
-    if (catagory === "all") {
-      setShownProducts(allProducts);
-    } else if (catagory === "men's clothing") {
-      setShownProducts(
-        allProducts.filter((product) => product.category === "men's clothing")
+    setCurrentCategory(category);
+
+    if (category === "all") {
+      setShownProducts(allProducts.slice(0, 8)); // Show first 10 products or as needed
+    } else {
+      const filteredProducts = allProducts.filter(
+        (product) => product.category === category
       );
-    } else if (catagory === "women's clothing") {
-      setShownProducts(
-        allProducts.filter((product) => product.category === "women's clothing")
-      );
-    } else if (catagory === "jewelery") {
-      setShownProducts(
-        allProducts.filter((product) => product.category === "jewelery")
-      );
-    } else if (catagory === "electronics") {
-      setShownProducts(
-        allProducts.filter((product) => product.category === "electronics")
-      );
+      setShownProducts(filteredProducts);
     }
   }
 

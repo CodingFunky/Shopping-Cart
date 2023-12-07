@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react/prop-types */
+// import React, { useState } from "react";
 import "./card.css";
 
 function Card({ product }) {
