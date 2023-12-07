@@ -82,8 +82,9 @@
     -webkit-line-clamp: 4;
     overflow: hidden;
     /* background-color: rgb(59, 53, 53); */
-    background: rgb(117,116,116);
-    background: linear-gradient(45deg, rgba(117,116,116,1) 7%, rgba(108,90,71,1) 87%);
+    background-color: rgb(44, 33, 19);
+    /* background: rgb(117,116,116);
+    background: linear-gradient(45deg, rgba(117,116,116,1) 7%, rgba(108,90,71,1) 87%); */
     color: white;
     padding: 5px;
 }
