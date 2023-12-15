@@ -9,23 +9,23 @@ import "./App.css";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   function addToCart(item) {
     setCartItems((prev) => [...prev, item]);
     console.log(cartItems);
   }
-  const [isCartOpen, setIsCartOpen] = useState(false);
 
   function toggleCart() {
     setIsCartOpen((prev) => !prev);
   }
   return (
     <>
-      {isCartOpen && <Cart></Cart>}
+      {isCartOpen && <Cart items={cartItems}></Cart>}
       {isCartOpen && <div className="backdrop" onClick={toggleCart}></div>}
       <div className="page-container">
         <BrowserRouter>
-          <Navbar toggleCart={toggleCart} />
+          <Navbar toggleCart={toggleCart} items={cartItems} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop addToCart={addToCart} />} />
