@@ -7,8 +7,8 @@ function cartCard({ id, title, price, image }) {
       <div className="cart-image-container">
         <img src={image} alt="" className="cart-image" />
       </div>
-      <p>{title}</p>
-      <h4>{price}</h4>
+      <p className="cart-title">{title}</p>
+      <h4 className="cart-price">{price}</h4>
     </div>
   );
 }
