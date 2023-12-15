@@ -41,6 +41,7 @@ a {
 }
 .cart-container {
   background-color: black;
+  color: white;
   position: fixed;
   top: 0;
   right: 0;
@@ -48,6 +49,7 @@ a {
   height: 100vh;
   z-index: 101;
   border-radius: 5% 0% 0% 5%;
+  padding: 2em;
 }
 .backdrop {
   position: fixed;

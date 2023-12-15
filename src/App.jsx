@@ -12,8 +12,12 @@ function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   function addToCart(item) {
-    setCartItems((prev) => [...prev, item]);
-    console.log(cartItems);
+    let newItem = { ...item };
+    newItem.key = `item-${Date.now()}-${Math.random()
+      .toString(36)
+      .substr(2, 9)}`;
+
+    setCartItems((prev) => [...prev, newItem]);
   }
 
   function toggleCart() {
