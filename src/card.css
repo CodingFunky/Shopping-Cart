@@ -27,7 +27,8 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   
     /* Optional: Slightly scale the card on hover */
-    transform: scale(1.05);
+    transition: transform 2s ease-in-out;
+    transform: scale(1.001);
   }
 .card-title {
     /* background-color: rgb(59, 53, 53); */

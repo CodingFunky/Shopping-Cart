@@ -19,7 +19,7 @@ function Cart(props) {
     <div className="cart-container">
       <div className="cart-header">
         <div className="cart-item-count">{props.items.length} Items</div>
-        <div className="cart-empty-btn btn"></div>
+        <div className="cart-empty-btn btn">Clear</div>
       </div>
       <div className="cart-main">
         <div className="cart-items">
