@@ -19,6 +19,9 @@
     gap: 1em;
     margin-right: 4em;
 }
+.links > * + * {
+  margin-left: 1em;
+}
 .right-nav {
     display: flex;
     justify-content: space-between;
