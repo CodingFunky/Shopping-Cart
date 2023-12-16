@@ -60,7 +60,6 @@ h3 {
   justify-content: center;
   align-items: center;
   width: 82%;
-  /* gap: 3em; */
 }
 .shop-links > * + * {
   margin-top: 3.5em;
@@ -76,7 +75,6 @@ h3 {
   justify-content: center;
   align-items: center;
   padding: 4em;
-  /* gap: 10em; */
 }
 .home-banner-container > * + * {
   margin-top: 10em;
@@ -85,7 +83,9 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+}
+.home-banner > * + * {
+  margin-left: 3em;
 }
 .home-banner-img {
   width: 50%;
