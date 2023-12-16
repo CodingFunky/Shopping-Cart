@@ -16,11 +16,11 @@
 .links {
     display: flex;
     list-style-type: none;
-    gap: 1em;
+    /* gap: 1em; */
     margin-right: 4em;
 }
 .links > * + * {
-  margin-left: 1em;
+  margin-left: 2em;
 }
 .right-nav {
     display: flex;

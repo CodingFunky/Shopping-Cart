@@ -20,7 +20,7 @@
     margin-bottom: 2rem;
     transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and scale */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .card:hover {
     /* Larger shadow on hover */
@@ -75,7 +75,8 @@
     left: 1em;
 }
 .plus-btn:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
+    cursor: pointer;
 }
 .card-des {
     height: 35%;

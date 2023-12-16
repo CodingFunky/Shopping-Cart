@@ -15,6 +15,7 @@ h3 {
 }
 .btn {
   cursor: pointer;
+  
 }
 .btn:hover {
   transform: scale(1.05);
@@ -59,7 +60,10 @@ h3 {
   justify-content: center;
   align-items: center;
   width: 82%;
-  gap: 3em;
+  /* gap: 3em; */
+}
+.shop-links > * + * {
+  margin-top: 3.5em;
 }
 .home-container {
   display: flex;
@@ -72,7 +76,10 @@ h3 {
   justify-content: center;
   align-items: center;
   padding: 4em;
-  gap: 10em;
+  /* gap: 10em; */
+}
+.home-banner-container > * + * {
+  margin-top: 10em;
 }
 .home-banner {
   display: flex;
