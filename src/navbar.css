@@ -9,10 +9,11 @@
   
 }
 .small {
+  font-size: large;
   justify-content: flex-end;
   position: absolute;
-  top: 60px;
-  right: 50px
+  top: 50px;
+  right: 40px
 }
 .logo {
     height: 9em;

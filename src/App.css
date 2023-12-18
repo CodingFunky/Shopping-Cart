@@ -96,27 +96,23 @@ h3 {
 
 @media only screen and (max-width: 720px) {
   body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
   html, body {
-    height: 100%; /* This sets the minimum height */
-    width: 10px; /* This ensures the width is full-screen */
     margin: 0; /* Removes default margin */
     padding: 0; /* Removes default padding */
     font-size: 10px;
-  }
-  .shop-container {
-    width: 100vw
   }
   .logo {
     display: none;
   }
   .shop-banner {
     height: 56px;
+    /* width: 100vw; */
   }
   .shop-sidebar {
     margin-left: 0.2em;
-    width: 16%;
+    width: 18%;
   }
   .shop-links {
   }
