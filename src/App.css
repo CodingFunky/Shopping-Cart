@@ -103,6 +103,13 @@ h3 {
     padding: 0; /* Removes default padding */
     font-size: 10px;
   }
+  .home-banner-container {
+    padding: 0;
+    margin: 0px;
+  }
+  .home-banner-container > * + * {
+    margin-top: 2em;
+  }
   .shop-banner {
     height: 56px;
     /* width: 100vw; */
