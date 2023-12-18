@@ -8,6 +8,12 @@
     margin-top: 1em;
   
 }
+.small {
+  justify-content: flex-end;
+  position: absolute;
+  top: 60px;
+  right: 50px
+}
 .logo {
     height: 9em;
     padding: 1.5em;

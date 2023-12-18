@@ -51,8 +51,8 @@ function Navbar(props) {
               </NavLink>
             </li>
           </ul>
-          <i className="fa fa-shopping-cart" onClick={props.toggleCart}></i>
         </nav>
+        <i className="fa fa-shopping-cart small" onClick={props.toggleCart}></i>
       </div>
 
       {/* Additional styles for mobile menu */}
