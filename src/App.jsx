@@ -5,6 +5,7 @@ import Navbar from "./navbar.jsx";
 import Home from "./home.jsx";
 import Shop from "./shop.jsx";
 import Cart from "./cart.jsx";
+import Footer from "./footer.jsx";
 import "./App.css";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Route path="/shop" element={<Shop addToCart={addToCart} />} />
           </Routes>
         </BrowserRouter>
+        <Footer />
       </div>
     </>
   );
