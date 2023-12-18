@@ -4,9 +4,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    overflow: hidden;
   }
 .card {
     height: 400px;
+    width: 40%;
+    /* min-width: 35%; */
     max-width: 40%;
     display: flex;
     flex-direction: column;
@@ -95,13 +98,20 @@
 
 @media only screen and (max-width: 720px) {
     .card-container {
-        overflow: hidden;
+        overflow: hidden; 
+        /* min-height: 900px; */
+        height: 1283px;
       }
     .card {
         margin: 0px;
         height: 20%;
+        flex: auto;
+    }
+    .card-des {
+        width: 100%;
     }
     .product-des {
         display: none;
+        width: 100%;
     }
 }
