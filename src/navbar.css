@@ -193,6 +193,7 @@ a {
       display: flex;
       flex-direction: column;
       height: 6em;
+      width: 50%;
     }
     .links {
       flex-direction: column;
