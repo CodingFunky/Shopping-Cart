@@ -98,6 +98,14 @@ a {
 }
 .cart-title {
   max-width: 50%;
+  font-weight: bold;
+}
+.cart-price {
+  font-weight: 300;
+}
+.total {
+  font-size: 25px;
+  font-weight: bold;
 }
 .backdrop {
   position: fixed;
@@ -184,13 +192,22 @@ a {
     .right-nav.open {
       display: flex;
       flex-direction: column;
-      /* height: 90%; */
+      height: 6em;
     }
     .links {
       flex-direction: column;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
     }
     .links li {
-      margin-bottom: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* padding-bottom: 6px; */
+      height: 20px;
       margin-left: 0px;
+      border-bottom: 1px black solid;
     }
   }
