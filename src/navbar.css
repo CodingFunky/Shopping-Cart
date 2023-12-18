@@ -153,6 +153,12 @@ a {
       padding: 0em;
       margin: 0.5em;
     }
+    .cart-image-container {
+      max-height: 100px;
+      max-width: 100px;
+      height: 90px;
+      width: 90px;
+    }
     .cart-price {
       padding: 0px;
       margin: 0px;
