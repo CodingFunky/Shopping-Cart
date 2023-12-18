@@ -16,7 +16,6 @@
 .links {
     display: flex;
     list-style-type: none;
-    /* gap: 1em; */
     margin-right: 4em;
 }
 .links > * + * {
@@ -32,7 +31,7 @@ a {
     color: inherit;
 }
 .divider {
-    width: 2px; /* Width of the line */
+    width: 0.1em; /* Width of the line */
     height: 500%; /* Adjust based on your navbar's height */
     background-color: black; /* Color of the line */
     transform: rotate(90deg);
@@ -57,6 +56,7 @@ a {
 .cart-header{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1em;
 }
 .cart-items {
   height: 85vh;
@@ -64,7 +64,7 @@ a {
   flex-direction: column;
 }
 .cart-item {
-  margin: 10px;
+  margin: 0.6em;
   color: black;
   display: flex;
   justify-content: space-between;
@@ -75,22 +75,18 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
-  width: 80px;
+  height: 15vw; /* Adjusts based on viewport width */
+  width: 15vw; /* Adjusts based on viewport width */
+  max-height: 80px; /* Ensures it doesn't get too big on large screens */
+  max-width: 80px; /* Ensures it doesn't get too big on large screens */
   background-color: white;
   border-radius: 10%;
   overflow: hidden;
-  background-color: #ffffff; /* Background color of the box */
-  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4); /* Inner shadow */
-  border-radius: 10px; /* Optional: for rounded corners */
 }
 .cart-image {
   height: 70%;
-  width: 50%;
+  width: 70%;
   background-color: white;
-  /* border: black 1px solid; */
-  padding: 8px 15px;
-  border-radius: 10%;
   
 }
 .cart-title {
@@ -105,3 +101,55 @@ a {
   background: rgba(0, 0, 0, 0.5);
   z-index: 100; /* Ensure it's above other content but below the cart */
 }
+
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+  }
+  .hamburger-menu.open div:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+  }
+  .hamburger-menu.open div:nth-child(1) {
+    transform: translateY(9px) rotate(45deg); /* Top bar rotated */
+  }
+  .hamburger-menu.open div:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg); /* Bottom bar rotated */
+  }
+.hamburger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+@media (max-width: 768px) {
+    .hamburger-menu {
+      display: block;
+      z-index: 102;
+    }
+    .right-nav {
+      display: none;
+      position: absolute;
+      top: 78px; /* Position below hamburger menu */
+      left: 0;
+      width: 100%;
+      background-color: white;
+      border: 1px black solid;
+      flex-direction: column;
+      align-items: start;
+      padding-left: 20px;
+      z-index: 101;
+    }
+    .right-nav.open {
+      display: flex;
+      flex-direction: column;
+    }
+    .links {
+      flex-direction: column;
+    }
+    .links li {
+      margin-bottom: 8px;
+      margin-left: 0px;
+    }
+  }

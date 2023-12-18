@@ -1,37 +1,61 @@
 /* eslint-disable react/prop-types */
-// import { useState } from "react";
+import { useState } from "react";
 import logo from "./assets/logo.png";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
 function Navbar(props) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
   return (
     <>
       <div className="navbar">
         <img className="logo" src={logo} alt="Logo" />
+
+        <div
+          className={`hamburger-menu ${isMobileMenuOpen ? "open" : ""}`}
+          onClick={toggleMobileMenu}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
         <span className="divider"></span>
-        <nav className="right-nav">
+        <nav className={`right-nav ${isMobileMenuOpen ? "open" : ""}`}>
           <ul className="links">
             <li>
-              <NavLink to="/" className="active-nb">
+              <NavLink to="/" className="active-nb" onClick={toggleMobileMenu}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/shop" className="active-nb">
+              <NavLink
+                to="/shop"
+                className="active-nb"
+                onClick={toggleMobileMenu}
+              >
                 Shop
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className="active-nb">
+              <NavLink
+                to="/about"
+                className="active-nb"
+                onClick={toggleMobileMenu}
+              >
                 About
               </NavLink>
             </li>
           </ul>
           <i className="fa fa-shopping-cart" onClick={props.toggleCart}></i>
         </nav>
-        {/* <i className="fa fa-shopping-cart"></i> */}
       </div>
+
+      {/* Additional styles for mobile menu */}
     </>
   );
 }

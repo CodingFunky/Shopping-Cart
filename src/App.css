@@ -90,3 +90,58 @@ h3 {
 .home-banner-img {
   width: 50%;
 }
+
+
+
+
+
+
+/* Medium devices (larger phones, 375px and up) */
+@media only screen and (max-width: 375px) {
+  /* Adjust styles for medium-sized devices here */
+  /* Example: */
+  .container {
+      padding: 10px;
+  }
+  .navbar {
+  }
+  .shop-main {
+    flex-direction: column;
+  }
+  .shop-sidebar {
+    margin: 0;
+    padding: 0;
+    width: 100vh;
+  }
+  .shop-links {
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    flex-wrap: nowrap;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .shop-link-wrapper {
+    /* position: relative; */
+    margin: 0;
+  }
+  ul {
+    margin: 0;
+  }
+  /* More styles adjustments for medium devices */
+}
+
+/* Small devices (phones, 320px and up) */
+@media only screen and (max-width: 320px) {
+  /* Adjust styles for small devices here */
+  /* Example: */
+  .container {
+      width: auto;
+  }
+  .menu-item {
+      font-size: 14px;
+  }
+  /* More style adjustments for small devices */
+}

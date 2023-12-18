@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+// import { useState } from "react";
 import "./card.css";
 
 function Card({ product, addToCart }) {
-  const [quantity, setQuantity] = useState();
+  // const [quantity, setQuantity] = useState();
+
   return (
     <div className="card">
       <div className="image-container">
