@@ -101,7 +101,7 @@ h3 {
   html, body {
     margin: 0; /* Removes default margin */
     padding: 0; /* Removes default padding */
-    font-size: 10px;
+    font-size: 12px;
   }
   .home-banner-container {
     padding: 0;
