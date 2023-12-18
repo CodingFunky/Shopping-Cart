@@ -93,16 +93,30 @@ h3 {
 
 
 
-
+@media only screen and (max-width: 720px) {
+  body {
+    overflow-x: hidden;
+  }
+  html, body {
+    height: 100%; /* This sets the minimum height */
+    width: 10px; /* This ensures the width is full-screen */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    font-size: 10px;
+  }
+  .shop-container {
+    width: 100vw
+  }
+  .logo {
+    display: none;
+  }
+}
 
 
 /* Medium devices (larger phones, 375px and up) */
 @media only screen and (max-width: 375px) {
   /* Adjust styles for medium-sized devices here */
   /* Example: */
-  .container {
-      padding: 10px;
-  }
   .navbar {
   }
   .shop-main {
