@@ -131,24 +131,6 @@ h3 {
   /* Example: */
   .navbar {
   }
-  .shop-main {
-    flex-direction: column;
-  }
-  .shop-sidebar {
-    margin: 0;
-    padding: 0;
-    width: 100vh;
-  }
-  .shop-links {
-    position: relative;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
-    flex-wrap: nowrap;
-    font-size: 10px;
-    font-weight: bold;
-  }
   /* More styles adjustments for medium devices */
 }
 
