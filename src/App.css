@@ -113,6 +113,7 @@ h3 {
   .shop-banner {
     height: 56px;
     /* width: 100vw; */
+    margin: 15px 0px;
   }
   .shop-sidebar {
     margin-left: 0.2em;

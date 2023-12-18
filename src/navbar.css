@@ -190,9 +190,10 @@ a {
       z-index: 101;
     }
     .right-nav.open {
+      font-size: 2em;
       display: flex;
       flex-direction: column;
-      height: 6em;
+      /* height: 6em; */
       width: 50%;
     }
     .links {
