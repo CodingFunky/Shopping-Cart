@@ -133,7 +133,7 @@ a {
 @media (max-width: 768px) {
     .logo {
       position: absolute;
-      left: 180px;
+      left: 120px;
     }
     .hamburger-menu {
       display: block;
