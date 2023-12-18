@@ -150,6 +150,7 @@ a {
     .right-nav.open {
       display: flex;
       flex-direction: column;
+      /* height: 90%; */
     }
     .links {
       flex-direction: column;
