@@ -89,7 +89,8 @@ h3 {
   margin-left: 3em;
 }
 .home-banner-img {
-  width: 50%;
+  width: 50%; /* or a specific width in pixels */
+  height: auto;
 }
 
 
