@@ -37,7 +37,7 @@ function Cart(props) {
         </div>
       </div>
       <div className="cart-footer">
-        <div className="total">Total: ${total}</div>
+        <div className="total">${total}</div>
       </div>
     </div>
   );

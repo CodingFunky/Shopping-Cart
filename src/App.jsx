@@ -40,7 +40,7 @@ function App() {
             <Route path="/shop" element={<Shop addToCart={addToCart} />} />
           </Routes>
         </BrowserRouter>
-        <Footer />
+        {!isCartOpen && <Footer />}
       </div>
     </>
   );
