@@ -13,13 +13,15 @@ function Cart(props) {
 
   useEffect(() => {
     getTotal();
-  }, []);
+  }, [props.items]);
 
   return (
     <div className="cart-container">
       <div className="cart-header">
         <div className="cart-item-count">{props.items.length} Items</div>
-        <div className="cart-empty-btn btn">Clear</div>
+        <div className="cart-empty-btn btn" onClick={props.clearCart}>
+          Clear
+        </div>
       </div>
       <div className="cart-main">
         <div className="cart-items">

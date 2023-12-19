@@ -55,7 +55,7 @@ a {
   top: 0;
   right: 0;
   width: 40%;
-  height: 100vh;
+  height: 85vh;
   z-index: 101;
   border-radius: 5% 0% 0% 5%;
   padding: 2em;
@@ -66,9 +66,10 @@ a {
   margin-bottom: 1em;
 }
 .cart-items {
-  height: 85vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 .cart-item {
   margin: 0.6em;

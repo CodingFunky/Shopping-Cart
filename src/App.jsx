@@ -24,9 +24,13 @@ function App() {
   function toggleCart() {
     setIsCartOpen((prev) => !prev);
   }
+
+  function clearCart() {
+    setCartItems([]);
+  }
   return (
     <>
-      {isCartOpen && <Cart items={cartItems}></Cart>}
+      {isCartOpen && <Cart items={cartItems} clearCart={clearCart}></Cart>}
       {isCartOpen && <div className="backdrop" onClick={toggleCart}></div>}
       <div className="page-container">
         <BrowserRouter>

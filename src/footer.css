@@ -6,5 +6,5 @@
     position: fixed; /* Changed from absolute to fixed */
     bottom: 0;
     width: 100%;
-    z-index: 1000; /* Ensure the footer is above other content */
+    z-index: 100; /* Ensure the footer is above other content */
 }
