@@ -55,7 +55,7 @@ a {
   top: 0;
   right: 0;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   z-index: 101;
   border-radius: 5% 0% 0% 5%;
   padding: 2em;
@@ -66,7 +66,7 @@ a {
   margin-bottom: 1em;
 }
 .cart-items {
-  height: 90vh;
+  height: 82vh;
   display: flex;
   flex-direction: column;
   overflow: scroll;
@@ -104,9 +104,28 @@ a {
 .cart-price {
   font-weight: 300;
 }
+.cart-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .total {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
+}
+.checkout-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 5em;
+  width: 80%;
+  background-color: black;
+  margin-top: 1.2em;
+}
+.checkout-btn:hover {
+  transform: scale(1.1);
 }
 .backdrop {
   position: fixed;

@@ -38,6 +38,7 @@ function Cart(props) {
       </div>
       <div className="cart-footer">
         <div className="total">${total}</div>
+        <div className="checkout-btn btn">Checkout</div>
       </div>
     </div>
   );
