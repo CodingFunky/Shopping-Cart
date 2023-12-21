@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 // import { useState } from "react";
+import { useContext } from "react";
 import "./card.css";
 
 function Card({ product, addToCart }) {

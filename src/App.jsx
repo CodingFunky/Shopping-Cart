@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./navbar.jsx";
@@ -8,7 +8,12 @@ import Cart from "./cart.jsx";
 import Footer from "./footer.jsx";
 import "./App.css";
 
-function App() {
+export const ShopContext = createContext({
+  cartItems: [],
+  addToCart: () => {},
+});
+
+export default function App() {
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
@@ -33,17 +38,17 @@ function App() {
       {isCartOpen && <Cart items={cartItems} clearCart={clearCart}></Cart>}
       {isCartOpen && <div className="backdrop" onClick={toggleCart}></div>}
       <div className="page-container">
-        <BrowserRouter>
-          <Navbar toggleCart={toggleCart} items={cartItems} />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop addToCart={addToCart} />} />
-          </Routes>
-        </BrowserRouter>
+        <ShopContext.Provider value={{ cartItems, addToCart }}>
+          <BrowserRouter>
+            <Navbar toggleCart={toggleCart} items={cartItems} />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/shop" element={<Shop addToCart={addToCart} />} />
+            </Routes>
+          </BrowserRouter>
+        </ShopContext.Provider>
         {!isCartOpen && <Footer />}
       </div>
     </>
   );
 }
-
-export default App;
