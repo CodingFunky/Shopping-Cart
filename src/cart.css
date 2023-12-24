@@ -29,6 +29,9 @@
     font-weight: bold;
     cursor: pointer;
 }
+.cart-main {
+    height: 100%;
+}
 .cart-items {
   height: 72vh;
   display: flex;
@@ -165,3 +168,27 @@
         margin-top: 0em;
     }
 }
+
+/* ******** HEIGHT CHANGE ********  */
+/* Add this at the bottom of your existing CSS */
+@media (max-height: 600px) { /* Adjust 600px to the height where issues begin */
+    .total-container, .total-container * {
+      font-size: 0.8em; /* Adjust as necessary */
+    }
+  
+    .cart-footer {
+      height: auto; /* Allow the footer to resize based on its content */
+      padding: 0.5em; /* Reduce padding to save space */
+    }
+  
+    .checkout-btn {
+      font-size: 1.5em; /* Adjust the checkout button font size as well */
+    }
+  }
+  
+  /* Further reduce the font size for extremely small heights */
+  @media (max-height: 400px) {
+    .total-container, .total-container * {
+      font-size: 0.6em; /* Even smaller font size for very short viewports */
+    }
+  }
