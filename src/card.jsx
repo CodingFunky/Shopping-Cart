@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 // import { useState } from "react";
 import { useContext } from "react";
+import { ShopContext } from "./App";
 import "./card.css";
 
-function Card({ product, addToCart }) {
+function Card({ product }) {
   // const [quantity, setQuantity] = useState();
+  const { addToCart } = useContext(ShopContext);
 
   return (
     <div className="card">

@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState, useContext } from "react";
 import logo from "./assets/logo.png";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
+import { ShopContext } from "./App";
 
-function Navbar(props) {
+function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { toggleCart } = useContext(ShopContext);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
@@ -52,7 +54,7 @@ function Navbar(props) {
             </li>
           </ul>
         </nav>
-        <i className="fa fa-shopping-cart small" onClick={props.toggleCart}></i>
+        <i className="fa fa-shopping-cart small" onClick={toggleCart}></i>
       </div>
 
       {/* Additional styles for mobile menu */}

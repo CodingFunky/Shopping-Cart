@@ -11,6 +11,7 @@ import "./App.css";
 export const ShopContext = createContext({
   cartItems: [],
   addToCart: () => {},
+  isCartOpen: false,
 });
 
 export default function App() {
@@ -34,21 +35,25 @@ export default function App() {
     setCartItems([]);
   }
   return (
-    <>
-      {isCartOpen && <Cart items={cartItems} clearCart={clearCart}></Cart>}
-      {isCartOpen && <div className="backdrop" onClick={toggleCart}></div>}
-      <div className="page-container">
-        <ShopContext.Provider value={{ cartItems, addToCart }}>
-          <BrowserRouter>
-            <Navbar toggleCart={toggleCart} items={cartItems} />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/shop" element={<Shop addToCart={addToCart} />} />
-            </Routes>
-          </BrowserRouter>
-        </ShopContext.Provider>
-        {!isCartOpen && <Footer />}
-      </div>
-    </>
+    <ShopContext.Provider
+      value={{ cartItems, addToCart, isCartOpen, toggleCart, clearCart }}
+    >
+      <BrowserRouter>
+        <Navbar />
+        {isCartOpen && (
+          <>
+            <Cart />
+            <div className="backdrop" onClick={toggleCart}></div>
+          </>
+        )}
+        <div className="page-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+          </Routes>
+          {!isCartOpen && <Footer />}
+        </div>
+      </BrowserRouter>
+    </ShopContext.Provider>
   );
 }
