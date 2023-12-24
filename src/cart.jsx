@@ -6,6 +6,7 @@ import "./cart.css";
 
 function Cart() {
   const [total, setTotal] = useState(0);
+  const [tax, setTax] = useState(0);
   const { cartItems, clearCart } = useContext(ShopContext);
 
   function getTotal() {
@@ -14,8 +15,14 @@ function Cart() {
     setTotal(formattedSum);
   }
 
+  function getTax() {
+    const tax = total * 0.8;
+    setTax(tax);
+  }
+
   useEffect(() => {
     getTotal();
+    getTax;
   }, [cartItems]);
 
   return (
@@ -43,7 +50,7 @@ function Cart() {
         <div className="checkout-btn btn">Checkout</div>
         <div className="total-container">
           <div className="subTotal">Sub Total: ${total}</div>
-          <div className="tax">Taxes: $4.20</div>
+          <div className="tax">Taxes: {tax}</div>
           <div className="total">Total: ${(total + 4.2).toFixed(2)}</div>
         </div>
       </div>
