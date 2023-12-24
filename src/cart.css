@@ -120,6 +120,7 @@
   font-size: 2em;
   border-radius: 5%;
   cursor: pointer;
+  user-select: none;
 }
 .checkout-btn {
     text-align: center;
