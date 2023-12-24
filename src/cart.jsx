@@ -44,7 +44,7 @@ function Cart() {
         <div className="total-container">
           <div className="subTotal">Sub Total: ${total}</div>
           <div className="tax">Taxes: $4.20</div>
-          <div className="total">Sub Total: ${(total + 4.2).toFixed(2)}</div>
+          <div className="total">Total: ${(total + 4.2).toFixed(2)}</div>
         </div>
       </div>
     </div>
