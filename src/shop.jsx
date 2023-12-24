@@ -97,11 +97,7 @@ function Shop(props) {
         <div className="catagories"></div>
         <div className="card-container">
           {shownProducts.map((product, index) => (
-            <Card
-              product={product}
-              key={index}
-              addToCart={props.addToCart}
-            ></Card>
+            <Card product={product} key={index}></Card>
           ))}
         </div>
       </div>

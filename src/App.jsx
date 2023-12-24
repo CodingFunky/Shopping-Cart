@@ -12,6 +12,7 @@ export const ShopContext = createContext({
   cartItems: [],
   addToCart: () => {},
   isCartOpen: false,
+  toggleCart: () => {},
 });
 
 export default function App() {
