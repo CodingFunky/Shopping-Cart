@@ -16,14 +16,14 @@ function Cart() {
   }
 
   function getTax() {
-    const tax = total * 0.8;
-    setTax(tax);
+    const newTax = total * 0.08;
+    setTax(newTax);
   }
 
   useEffect(() => {
     getTotal();
-    getTax;
-  }, [cartItems]);
+    getTax();
+  }, [cartItems, tax]);
 
   return (
     <div className="cart-container">
@@ -50,8 +50,8 @@ function Cart() {
         <div className="checkout-btn btn">Checkout</div>
         <div className="total-container">
           <div className="subTotal">Sub Total: ${total}</div>
-          <div className="tax">Taxes: {tax}</div>
-          <div className="total">Total: ${(total + 4.2).toFixed(2)}</div>
+          <div className="tax">Taxes: ${tax.toFixed(2)}</div>
+          <div className="total">Total: ${(total + tax).toFixed(2)}</div>
         </div>
       </div>
     </div>
